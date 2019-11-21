@@ -25,7 +25,7 @@ import java.util.HashMap;
 @Controller
 public class MainController {
 
-    
+
 
 
     //@Value("{ACC_SERVICE:#{null}}")
@@ -37,14 +37,14 @@ public class MainController {
     @Autowired
     private TokenDecoderService tokenDecoderService;
 
-    @GetMapping({"/","/index"})
+    @GetMapping({"/index"})
     public String showHomePage(Model model) {
         model.addAttribute("accsvc",accountSvc);
         model.addAttribute("paywrapper",new PaymentWrapper());
         return "index";
     }
 
-    @GetMapping("/login")
+    @GetMapping(value = {"/login","/"})
     public String showLoginPage(@ModelAttribute LoginRequest loginRequest){
         return "login";
     }
