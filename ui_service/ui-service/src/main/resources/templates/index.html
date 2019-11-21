@@ -98,7 +98,9 @@
 		$("#plan").children().remove();
 		$("#sub-details").children().remove();
 		$("#pay").attr("disabled", true);
-
+		$("#price").val();
+		$("#time").val();
+		$("#category").val();
 		savedPlan = [];
 		var selectedCountry = $("#country").val();
 		$.ajax({
@@ -123,6 +125,9 @@
 		$("#plan").children().remove();
 		$("#sub-details").children().remove();
 		$("#pay").attr("disabled", true);
+		$("#price").val();
+		$("#time").val();
+		$("#category").val();
 		var selectedProvider = $("#provider").val();
 		$.ajax({
 			"url": "http://34.70.154.170/provider/"+selectedProvider,
