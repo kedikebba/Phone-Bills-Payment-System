@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notification-service-deployment
+  labels:
+    app: notification-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notification-service
+  template:
+    metadata:
+      labels:
+        app: notification-service
+
+    spec:
+      containers:
+        - name: notification-service
+          image: mniyonshuti/notification-service:latest
+          ports:
+            - containerPort: 8080
+          env:
+            #MONGO
+            - name: MONGO_HOST
+              valueFrom:
+                configMapKeyRef:
+                    name: notification-service-config
+                    key: mongodb
+
+            - name: MONGO_DB
+              value: notifications
+
+            #KAFKA
+            - name: KAFKA
+              valueFrom:
+                configMapKeyRef:
+                  name: notification-service-config
+                  key: kafka
+
+            - name: GROUP_ID
+              value: group_id
+
+            #MAIL-SERVER
+            - name: EMAIL_USER
+              value: ea.fanatics2019@gmail.com
+
+            - name: EMAIL_HOST
+              value: smtp.gmail.com
+
+            - name: EMAIL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: notification-service-secrets
+                  key: email-password
