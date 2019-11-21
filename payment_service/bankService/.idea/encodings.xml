@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../../Practice/Spring Batch/springBatchPractice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../UserInterface-Final/ui-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../creditCardService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../paymentService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../paypalService" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/springboot-elasticsearch-example" charset="UTF-8" />
+  </component>
+</project>
