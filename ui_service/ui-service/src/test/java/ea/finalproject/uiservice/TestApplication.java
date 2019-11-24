@@ -23,6 +23,7 @@ public class TestApplication extends UiServiceApplicationTests {
     }
     @Test
     public void testLinks() throws Exception{
-        mockMvc.perform(get("http://34.70.154.170/provider/atnt")).andExpect(status().isOk());
+        mockMvc.perform(get("http://34.67.167.114/login")).andExpect(status().isOk());
     }
+
 }
